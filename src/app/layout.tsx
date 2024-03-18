@@ -1,16 +1,16 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
 import { Providers } from './providers'
-import Navigation from './Navigation'
+import Navigation from '../lib/components/Navigation'
 import { LoadingProvider } from '../lib/context/LoadingContext';
 import LoadingScreen from '../lib/components/LoadingPage';
 
 const inter = Inter({ subsets: [ 'latin' ] })
 
 export const metadata: Metadata = {
-    title: 'Student Administration',
-    description: 'Student Administration',
+    title: 'NextJS Template',
+    description: 'NextJS Template',
 }
 
 export default function RootLayout({

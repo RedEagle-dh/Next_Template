@@ -1,3 +1,4 @@
+'use client';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Avatar, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import { signOut } from "next-auth/react";
 import { usePathname } from "next/navigation";
@@ -7,15 +8,15 @@ export default function Navigation() {
 
 
     const navItems = [
-        { name: 'Students', path: '/students' },
-        { name: 'Groups', path: '/groups' },
-        { name: 'Admin', path: '/admin', role: 'ADMIN' },
+        { name: 'Item1', path: '/itemone' },
+        { name: 'Item2', path: '/itemtwo' },
+        { name: 'Item3', path: '/itemthree', role: 'ADMIN' },
     ];
 
     return (
         <Navbar maxWidth="full" isBordered isBlurred={false}>
             <NavbarBrand>
-                <a className="font-semibold text-inherit" href="/">StudNet Administration</a>
+                <a className="font-semibold text-inherit" href="/">Nextjs Template</a>
             </NavbarBrand>
             <NavbarContent className="sm:flex gap-4" justify="center">
                 {navItems.map((item, index) => (
@@ -29,7 +30,7 @@ export default function Navigation() {
                     <Dropdown>
                         <DropdownTrigger>
                             <Button>
-                                <Avatar size="sm" src="/avatar.jpg" />
+                                Login
                             </Button>
                         </DropdownTrigger>
                         <DropdownMenu>
